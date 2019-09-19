@@ -1,7 +1,7 @@
 # dwn-client
 dwn 第三方对接类库
 # 安装
->composer require dwn/client
+>composer require dwn/partner-client
 
 ### 使用示例
 ~~~
