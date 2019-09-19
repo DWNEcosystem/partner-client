@@ -107,5 +107,5 @@ abstract class Base
      * 获取用户数据
      * @return array
      */
-    abstract public function getNetworks():array ;
+    abstract public function getNetworks(array $params):array ;
 }
