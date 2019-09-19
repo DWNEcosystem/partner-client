@@ -102,4 +102,10 @@ abstract class Base
      * @return array
      */
     abstract public function ratio():array ;
+
+    /**
+     * 获取用户数据
+     * @return array
+     */
+    abstract public function getNetworks():array ;
 }
