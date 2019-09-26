@@ -89,7 +89,7 @@ namespace dwn\Channel;
       */
      public function getNetworks(array $params): array
      {
-         if(!isset($params['uid'])||empty($params['uid'])){
+         if(!isset($params['uid'])){
              return ["code"=>2004,'message'=>'参数错误'];
          }
          return $this->post($this->url.'/getNetworks', $params,$this->header);
