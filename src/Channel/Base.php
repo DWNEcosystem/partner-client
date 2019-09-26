@@ -10,7 +10,7 @@ abstract class Base
      * 请求地址
      * @var string
      */
-     protected $url= 'http://47.102.36.123:8686';
+     protected $url= 'http://47.103.217.50:8686';
     /**
      * 资源返回
      * @var string

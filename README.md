@@ -19,6 +19,7 @@ $client->setOption('getUserInfo')->setParams(["authorization_code"=>"45e8c62cmch
       <4>  exchange        dwn兑换其他货币
       <5>  recharge        其他货币兑换dwn
       <6>  ratio           获取实时汇率
+      <7>  getNetworks     获取用户关联关系
 ~~~
 
 ~~~
