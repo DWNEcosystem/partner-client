@@ -94,4 +94,28 @@ namespace dwn\Channel;
          }
          return $this->post($this->url.'/getNetworks', $params,$this->header);
      }
+
+     /**
+      * @return array
+      * @throws \dwn\Exception\Exception
+      */
+     public function exist(array $params): array
+     {
+         if(!isset($params['mobile'])){
+             return ["code"=>2004,'message'=>'参数错误'];
+         }
+         return $this->post($this->url.'/exist', $params,$this->header);
+     }
+
+     /**
+      * @return array
+      * @throws \dwn\Exception\Exception
+      */
+     public function register(array $params): array
+     {
+         if(!isset($params['mobile'])){
+             return ["code"=>2004,'message'=>'参数错误'];
+         }
+         return $this->post($this->url.'/register', $params,$this->header);
+     }
  }

@@ -108,4 +108,16 @@ abstract class Base
      * @return array
      */
     abstract public function getNetworks(array $params):array ;
+
+    /**
+     * 判断用户是否存在
+     * @return array
+     */
+    abstract public function exist(array $params):array ;
+
+    /**
+     * 用户注册
+     * @return array
+     */
+    abstract public function register(array $params):array ;
 }
