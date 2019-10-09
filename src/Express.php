@@ -8,6 +8,7 @@ use dwn\Exception\Exception;
 
 class Express
 {
+    private $url='http://47.103.217.50';
 
     private $app_id='';
 
@@ -16,8 +17,9 @@ class Express
     private $option=null;
 
     private $params=null;
-    public function __construct(string $app_id=null,string $secret=null)
+    public function __construct(string $app_id=null,string $secret=null,string $url=null)
     {
+       !is_null($url)&&$this->url=$url;
        !is_null($app_id)&&$this->app_id=$app_id;
        !is_null($secret)&&$this->secret=$secret;
     }
@@ -51,7 +53,7 @@ class Express
      */
     public function execute(array $params=[]){
         $option = $this->option;
-        $client=new Option($this->app_id,$this->secret);
+        $client=new Option($this->url,$this->app_id,$this->secret);
         $results=$client->$option(array_merge($this->params,$params));
         return $results;
     }

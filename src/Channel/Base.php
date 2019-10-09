@@ -10,7 +10,7 @@ abstract class Base
      * 请求地址
      * @var string
      */
-     protected $url= 'http://47.103.217.50:8686';
+     protected $url= '';
     /**
      * 资源返回
      * @var string
@@ -23,8 +23,9 @@ abstract class Base
      */
      protected $header=[];
 
-    function __construct($app_id,$secret)
+    function __construct($url,$app_id,$secret)
     {
+        $this->url=$url.':8686';
         $this->header=[
             'appId:'.$app_id,
             'Content-Type: application/json'
@@ -96,6 +97,14 @@ abstract class Base
      * @return array
      */
     abstract public function recharge(array $params):array ;
+
+
+    /**
+     * 发放收益
+     * @param array $params
+     * @return array
+     */
+    abstract public function earnings(array $params):array ;
 
     /**
      * 获取实时汇率

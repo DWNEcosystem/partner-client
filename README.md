@@ -18,10 +18,11 @@ $client->setOption('getUserInfo')->setParams(["authorization_code"=>"45e8c62cmch
       <3>  getUserInfo     获取用户信息
       <4>  exchange        dwn兑换其他货币
       <5>  recharge        其他货币兑换dwn
-      <6>  ratio           获取实时汇率
-      <7>  getNetworks     获取用户关联关系
-      <8>  exist           判断用户是否存在
-      <9>  register        用户注册
+      <6>  earnings        发放收益
+      <7>  ratio           获取实时汇率
+      <8>  getNetworks     获取用户关联关系
+      <9>  exist           判断用户是否存在
+      <10>  register        用户注册
 ~~~
 
 ~~~

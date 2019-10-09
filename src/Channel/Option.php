@@ -74,6 +74,21 @@ namespace dwn\Channel;
         return $this->post($this->url.'/recharge', $params,$this->header);
     }
 
+
+     /**
+      * @param array $params
+      * @return array
+      * @throws \dwn\Exception\Exception
+      */
+     public function earnings(array $params): array
+     {
+         if(!isset($params['uid'])||empty($params['uid'])||!isset($params['num'])||empty($params['num'])){
+             return ["code"=>2004,'message'=>'参数错误'];
+         }
+         $this->ratio();
+         return $this->post($this->url.'/earnings', $params,$this->header);
+     }
+
      /**
       * @return array
       * @throws \dwn\Exception\Exception
