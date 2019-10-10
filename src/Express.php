@@ -16,7 +16,7 @@ class Express
 
     private $option=null;
 
-    private $params=null;
+    private $params=[];
     public function __construct(string $app_id=null,string $secret=null,string $url=null)
     {
        !is_null($url)&&$this->url=$url;
