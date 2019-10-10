@@ -123,6 +123,7 @@ namespace dwn\Channel;
      }
 
      /**
+      * @param array $params
       * @return array
       * @throws \dwn\Exception\Exception
       */
@@ -132,5 +133,18 @@ namespace dwn\Channel;
              return ["code"=>2004,'message'=>'参数错误'];
          }
          return $this->post($this->url.'/register', $params,$this->header);
+     }
+
+     /**
+      * @param array $params
+      * @return array
+      * @throws \dwn\Exception\Exception
+      */
+     public function login(array $params): array
+     {
+         if(!isset($params['session'])){
+             return ["code"=>2004,'message'=>'参数错误'];
+         }
+         return $this->post($this->url.'/login', $params,$this->header);
      }
  }

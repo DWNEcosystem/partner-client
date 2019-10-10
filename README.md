@@ -23,6 +23,7 @@ $client->setOption('getUserInfo')->setParams(["authorization_code"=>"45e8c62cmch
       <8>  getNetworks     获取用户关联关系
       <9>  exist           判断用户是否存在
       <10>  register        用户注册
+      <11>  login          用户通过session登录
 ~~~
 
 ~~~
