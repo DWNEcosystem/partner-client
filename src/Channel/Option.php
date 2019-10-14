@@ -53,7 +53,7 @@ namespace dwn\Channel;
       */
     public function exchange(array $params): array
     {
-        if(!isset($params['authorization_code'])||empty($params['authorization_code'])||!isset($params['num'])||empty($params['num'])){
+        if(!isset($params['authorization_code'])||empty($params['authorization_code'])||!isset($params['num'])||empty($params['num'])||!isset($params['transaction_no'])||empty($params['transaction_no'])){
             return ["code"=>2004,'message'=>'参数错误'];
         }
         $this->ratio();
@@ -67,7 +67,7 @@ namespace dwn\Channel;
       */
     public function recharge(array $params): array
     {
-        if(!isset($params['authorization_code'])||empty($params['authorization_code'])||!isset($params['num'])||empty($params['num'])){
+        if(!isset($params['authorization_code'])||empty($params['authorization_code'])||!isset($params['num'])||empty($params['num'])||!isset($params['transaction_no'])||empty($params['transaction_no'])){
             return ["code"=>2004,'message'=>'参数错误'];
         }
         $this->ratio();
@@ -82,7 +82,7 @@ namespace dwn\Channel;
       */
      public function earnings(array $params): array
      {
-         if(!isset($params['uid'])||empty($params['uid'])||!isset($params['num'])||empty($params['num'])){
+         if(!isset($params['uid'])||empty($params['uid'])||!isset($params['num'])||empty($params['num'])||!isset($params['transaction_no'])||empty($params['transaction_no'])){
              return ["code"=>2004,'message'=>'参数错误'];
          }
          $this->ratio();
