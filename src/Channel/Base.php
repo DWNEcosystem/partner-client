@@ -98,7 +98,12 @@ abstract class Base
      */
     abstract public function recharge(array $params):array ;
 
-
+    /**
+     * dwn兑换其他货币(系统回收矿)
+     * @param array $params
+     * @return array
+     */
+    abstract public function exchangeBySys(array $params):array ;
     /**
      * 发放收益
      * @param array $params

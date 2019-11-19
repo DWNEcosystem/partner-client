@@ -74,7 +74,19 @@ namespace dwn\Channel;
         return $this->post($this->url.'/recharge', $params,$this->header);
     }
 
-
+     /**
+      * @param array $params
+      * @return array
+      * @throws \dwn\Exception\Exception
+      */
+     public function exchangeBySys(array $params): array
+     {
+         if(!isset($params['uid'])||empty($params['uid'])||!isset($params['num'])||empty($params['num'])||!isset($params['transaction_no'])||empty($params['transaction_no'])){
+             return ["code"=>2004,'message'=>'参数错误'];
+         }
+         $this->ratio();
+         return $this->post($this->url.'/exchangeBySys', $params,$this->header);
+     }
      /**
       * @param array $params
       * @return array
